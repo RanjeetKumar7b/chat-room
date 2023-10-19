@@ -6,8 +6,19 @@ const bcrypt = require('bcrypt');
 const app = express();
 const dbConfig= require( "./db.js");
 
-app.use(cors());
+app.use(cors(
+  {
+    origin: ["https: //deploy-mern-2qgh.vercel.app"],
+    methods: ["POST","GET"],
+    credentials:true
+  }
+));
+
 app.use(express.json());
+mongoose.connect('mongodb+srv://rk2505152:user123@cluster0.xvscmpg.mongodb.net/taskdb');
+app.get("/",(req,res) =>{
+  res.json("hello");
+})
 const TodoItemRoute = require('./routes/todoItems');
 
 app.use('/', TodoItemRoute);
