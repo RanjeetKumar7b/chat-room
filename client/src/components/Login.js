@@ -7,7 +7,7 @@ function Login({ setIsAuth }) {
   const [password, setPassword] = useState("");
 
   const cookies = new Cookies();
-  axios.defaults.withCredentials = true;
+  Axios.defaults.withCredentials = true;
   const login = () => {
     Axios.post("https://chat-room-api-three.vercel.app/login", {
       username,
