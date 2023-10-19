@@ -7,7 +7,7 @@ function SignUp({ setIsAuth }) {
   const [user, setUser] = useState(null);
 
   const signUp = () => {
-    Axios.post("https://chat-room-api-one.vercel.app/signup", user).then((res) => {
+    Axios.post("https://chat-room-api-three.vercel.app/signup", user).then((res) => {
       const { token, userId, firstName, lastName, username, hashedPassword } =
         res.data;
       cookies.set("token", token);
