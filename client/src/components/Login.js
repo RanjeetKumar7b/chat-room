@@ -8,7 +8,7 @@ function Login({ setIsAuth }) {
 
   const cookies = new Cookies();
   const login = () => {
-    Axios.post("https://chat-room-api-one.vercel.app/login", {
+    Axios.post("https://chat-room-api-three.vercel.app/login", {
       username,
       password,
     }).then((res) => {
