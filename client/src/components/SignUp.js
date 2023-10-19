@@ -5,7 +5,7 @@ import Cookies from "universal-cookie";
 function SignUp({ setIsAuth }) {
   const cookies = new Cookies();
   const [user, setUser] = useState(null);
-axios.defaults.withCredentials = true;
+Axios.defaults.withCredentials = true;
   const signUp = () => {
     Axios.post("https://chat-room-api-three.vercel.app/signup", user).then((res) => {
       const { token, userId, firstName, lastName, username, hashedPassword } =
