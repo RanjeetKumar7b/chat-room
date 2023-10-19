@@ -8,7 +8,7 @@ const dbConfig= require( "./db.js");
 
 app.use(cors(
   {
-    origin: ["https://chat-room-bubt.vercel.app"],
+    origin: ["https://chat-room-frontend-nine.vercel.app"],
     methods: ["POST","GET"],
     credentials:true
   }
